@@ -11,20 +11,6 @@ class CreateMultiselect extends React.Component {
     };
   }
 
-  // handleCreate(name) {
-  //   let { target, value } = this.state;
-
-  //   let newOption = {
-  //     name,
-  //     id: target.length + 1
-  //   };
-
-  //   this.setState({
-  //     value: [...value, newOption], // select new option
-  //     target: [...target, newOption] // add new option to our dataset
-  //   });
-  // }
-
   setSelectedOption(value){
   this.setState({
     value

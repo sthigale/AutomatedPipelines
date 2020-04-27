@@ -42,82 +42,8 @@ const Styles = styled.div`
   }
 `;
 
-function Index() {
-  /*
- const columns = React.useMemo(
-   () => [
-     {
-       Header: "Name",
-       columns: [
-         {
-           Header: "First Name",
-           accessor: "firstName",
-           // Use a two-stage aggregator here to first
-           // count the total rows being aggregated,
-           // then sum any of those counts if they are
-           // aggregated further
-           aggregate: "count",
-           Aggregated: ({ value }) => `${value} Names`
-         },
-         {
-           Header: "Last Name",
-           accessor: "lastName",
-           // Use our custom `fuzzyText` filter on this column
-           filter: "fuzzyText",
-           // Use another two-stage aggregator here to
-           // first count the UNIQUE values from the rows
-           // being aggregated, then sum those counts if
-           // they are aggregated further
-           aggregate: "uniqueCount",
-           Aggregated: ({ value }) => `${value} Unique Names`
-         }
-       ]
-     },
-     {
-       Header: "Info",
-       columns: [
-         {
-           Header: "Age",
-           accessor: "age",
-           Filter: SliderColumnFilter,
-           filter: "equals",
-           // Aggregate the average age of visitors
-           aggregate: "average",
-           Aggregated: ({ value }) => `${value} (avg)`
-         },
-         {
-           Header: "Visits",
-           accessor: "visits",
-           Filter: NumberRangeColumnFilter,
-           filter: "between",
-           // Aggregate the sum of all visits
-           aggregate: "sum",
-           Aggregated: ({ value }) => `${value} (total)`
-         },
-         {
-           Header: "Status",
-           accessor: "status",
-           Filter: SelectColumnFilter,
-           filter: "includes"
-         },
-         {
-           Header: "Profile Progress",
-           accessor: "progress",
-           Filter: SliderColumnFilter,
-           filter: filterGreaterThan,
-           // Use our custom roundedMedian aggregator
-           aggregate: roundedMedian,
-           Aggregated: ({ value }) => `${value} (med)`
-         }
-       ]
-     }
-   ],
-   []
- );
-  const [data, setData] = React.useState(() => data);
-
- */
-
+const Index = ({ Tabledata }) => {
+ 
   let Newcolumn = [
     {
       Header: "Target",
@@ -174,28 +100,8 @@ function Index() {
     }
   ];
 
-  const data1 = [
-    {
-      target: "TT1",
-      targetdataType: "Col1",
-      mapping: "ML Model 1",
-      percent: 10,
-      source: "source Table",
-      sourcedataType: "Col 2",
-      chooseReson: "by user"
-    },
-    {
-      target: "TT2",
-      targetdataType: "Col 3",
-      mapping: "ML Model 2",
-      percent: 20,
-      source: "source Table",
-      sourcedataType: "Col 4",
-      chooseReson: "by user"
-    }
-  ];
 
-  const [data, setData] = React.useState(() => data1);
+  const [data, setData] = React.useState(() => Tabledata);
   const [originalData] = React.useState(data);
 
   const skipResetRef = React.useRef(false);
@@ -233,7 +139,7 @@ function Index() {
       />
     </Styles>
   );
-}
+};
 
 export default Index;
 

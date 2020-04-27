@@ -5,7 +5,6 @@ import Table from "./ReusableComponent/TableIndex";
 const {
   Target,
   Source,
-  headers,
   tableData
 } = require("../component/Data/constantData.json");
 
@@ -106,7 +105,7 @@ class ConfigureStage extends React.Component {
         <br></br>
         <div>
           <label>Field Mappings</label>
-          <Table data={tableData}></Table>
+          <Table Tabledata={tableData}></Table>
         </div>
       </div>
     );

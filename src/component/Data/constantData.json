@@ -10,7 +10,7 @@
     { "name": "Site CTMS ", "value": "2" },
      { "name": "Site C ", "value": "3" }
   ],
-  "headers": ["Target", "Mapping", "Source", "ChangeReason", "Config"],
+ 
   "tableData": [
     {
       "target": "TT1",
@@ -30,5 +30,14 @@
       "sourcedataType": "Col 4",
       "chooseReson": "by user"
     }
+  ],
+  "headers":[
+
+    
   ]
+
+
+
+
+  
 }
