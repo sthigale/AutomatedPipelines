@@ -42,18 +42,22 @@ class AsyncRouteComponent extends React.Component {
 }
 
 const RouterOutletSwitch = ({ routeConfig }) => {
+  
   let { path, url } = useRouteMatch();
 
   return (
     <Switch>
       {routeConfig.routes &&
         routeConfig.routes.map((route, i) => {
+       console.log("path", route);
+
           return (
             <Route
               key={path + i}
               path={(path + route.path).replace(/\/\//g, "/")}
               exact={route.exact}
-              render={props => <AsyncRouteComponent {...props} route={route} />}
+              render={props => 
+                <AsyncRouteComponent {...props} route={route} />}
             />
           );
         })}
