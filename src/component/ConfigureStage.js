@@ -55,7 +55,7 @@ class ConfigureStage extends React.Component {
         <div className="row">
           <div className="col-sm-3 reactSelect">
             <label>Target 0/3</label>
-            <i className="fa fa-eye" style={{ marginLeft: "141px" }}></i>
+            <i className="fa fa-eye" style={{ marginLeft: "233px" }}></i>
             <CreateMultiselect
               options={this.state.target}
               value={this.state.value}
@@ -65,7 +65,7 @@ class ConfigureStage extends React.Component {
           </div>
           <div className="col-sm-3 reactSelect">
             <label>Source(10) </label>
-            <i className="fa fa-eye" style={{ marginLeft: "143px" }}></i>
+            <i className="fa fa-eye" style={{ marginLeft: "224px" }}></i>
 
             <CreateMultiselect
               options={this.state.Source}
