@@ -1,6 +1,7 @@
 import React from "react";
-import CreateMultiselect from "./ReusableComponent/React-widget";
-import Table from "./ReusableComponent/TableIndex";
+import CreateMultiselect from "./ReusableComponent/DropDown";
+// import Table from "./ReusableComponent/Table/TableI";
+import Table from "./ReusableComponent/Table";
 
 const {
   Target,
@@ -51,7 +52,7 @@ class ConfigureStage extends React.Component {
   
   render() {
     return (
-      <div >
+      <div>
         <div className="row">
           <div className="col-sm-3 reactSelect">
             <label>Target 0/3</label>
@@ -104,7 +105,7 @@ class ConfigureStage extends React.Component {
         </div>
         <br></br>
         <div>
-          <label>Field Mappings</label>
+          <label>Target Column / Field Mappings</label>
           <Table Tabledata={tableData}></Table>
         </div>
       </div>
