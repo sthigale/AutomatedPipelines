@@ -1,0 +1,34 @@
+{
+  "Target": [
+   { "name": "TT1,Complete", "value": "1" },
+        { "name": "TT2,Status", "value": "2" },
+        { "name": "TT3,Complete", "value": "3" },
+        {"name": "TT4,Status", "value": "4" }
+  ],
+  "Source": [
+    { "name": "Site Rave ", "value": "1" },
+    { "name": "Site CTMS ", "value": "2" },
+     { "name": "Site C ", "value": "3" }
+  ],
+  "headers": ["Target", "Mapping", "Source", "ChangeReason", "Config"],
+  "tableData": [
+    {
+      "target": "TT1",
+      "targetdataType": "Col1",
+      "mapping": "ML Model 1",
+      "percent": 10,
+      "source": "source Table",
+      "sourcedataType": "Col 2",
+      "chooseReson": "by user"
+    },
+    {
+      "target": "TT2",
+      "targetdataType": "Col 3",
+      "mapping": "ML Model 2",
+      "percent": 20,
+      "source": "source Table",
+      "sourcedataType": "Col 4",
+      "chooseReson": "by user"
+    }
+  ]
+}

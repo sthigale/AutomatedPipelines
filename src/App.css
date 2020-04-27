@@ -1,0 +1,67 @@
+
+.App-link {
+  color: #61dafb;
+}
+
+.custom-section .card{
+    border: none;
+}
+/* ul.nav.navbar-nav li{
+    padding-bottom: 10px;
+} */
+
+
+
+a:visited {
+  color: 	#000000;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2508a5;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+
+.table .thead-light th {
+    color: #495057;
+    background-color: rgba(161, 195, 231, 0.56);
+    border-color: #1c2834;
+}
+ .css-g1d714-ValueContainer{
+       height: 49px !important;
+}
+ 
+
+ i.fa {
+  display: inline-block;
+  border-radius: 60px;
+  box-shadow: 0px 0px 2px #888;
+  padding: 0.5em 0.6em;
+  background-color: #66abf6;
+
+} 
+
+.textSize{
+  font-size:17px
+}
+.btnHeight{
+  margin-top: 34px !important;
+}
+.multiSelect{
+  overflow-y: auto ;
+ 
+  
+  height: 200px;
+}
+
+.select-panel{
+ overflow-y: auto !important;
+ 
+  
+  height: 200px !important
+  ;
+}
+
