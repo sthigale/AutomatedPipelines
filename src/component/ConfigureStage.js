@@ -51,7 +51,7 @@ class ConfigureStage extends React.Component {
   
   render() {
     return (
-      <div className="container">
+      <div >
         <div className="row">
           <div className="col-sm-3 reactSelect">
             <label>Target 0/3</label>
