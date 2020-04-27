@@ -1,13 +1,14 @@
 import React from "react";
 import "./App.css";
 import { Link } from "react-router-dom";
-import RouterComponet from "./Routing";
+import routeConfig from "./Routing";
+import RouterOutlet from "./RouterOutlet";
 function App() {
   return (
     <div className="custom-section">
       <div className="card">
         <div className="card-header text-center font-weight-bolder">
-          <span style={{fontSize: "21px"}}> Fully Automated Pipelines</span>
+          <span style={{ fontSize: "21px" }}> Fully Automated Pipelines</span>
         </div>
         <div className="card-body">
           <div
@@ -21,12 +22,12 @@ function App() {
                 </Link>
               </li>
               <li className="col-sm-2 textSize">
-                <Link to={`/Component/Target`}>
+                <Link to={`/target`}>
                   <strong>2.Target</strong>
                 </Link>
               </li>
               <li className="col-sm-2 textSize">
-                <Link to={`/Component/HistoricalSimilarities`}>
+                <Link to={`/historicalSimilarities`}>
                   <strong> 3.Historical Similarities</strong>
                 </Link>
               </li>
@@ -34,12 +35,12 @@ function App() {
                 className="col-sm-3 textSize
              "
               >
-                <Link to={`/Component/ConfigureStage`}>
+                <Link to={`/configureStage`}>
                   <strong> 4.Configure & Stage (Temp)</strong>
                 </Link>
               </li>
               <li className="col-sm-2 textSize">
-                <Link to={`/Component/ValidateAndProcess`}>
+                <Link to={`/validateAndProcess`}>
                   <strong> 5.Validate & Process</strong>
                 </Link>
               </li>
@@ -48,7 +49,7 @@ function App() {
           <br></br>
           <div className="col-sm-12">
             <div className=" view-port-height">
-              <RouterComponet></RouterComponet>
+              <RouterOutlet routeConfig={routeConfig}></RouterOutlet>
             </div>
           </div>
         </div>
