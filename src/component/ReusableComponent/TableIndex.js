@@ -130,7 +130,6 @@ const Index = ({ Tabledata }) => {
 
   return (
     <Styles>
-     <button onClick={resetData}>Reset Data</button>
       <Table
         columns={Newcolumn}
         data={data}
