@@ -1,43 +1,21 @@
-import React, { Suspense, useState, useEffect } from "react";
+import React, { Suspense} from "react";
 import {
-  BrowserRouter as Router,
   Route,
   Switch,
-  Link,
   useRouteMatch
 } from "react-router-dom";
 
 class AsyncRouteComponent extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { canActivate: false };
-  }
-
-  componentDidMount() {
-    if (this.props.route.canActivate) {
-      this.props.route
-        .canActivate()
-        .then(() => {
-          this.setState({ canActivate: true });
-        })
-        .catch(() => {
-          this.setState({ canActivate: false });
-        });
-    } else {
-      this.setState({ canActivate: true });
-    }
-  }
-
+ 
   render() {
-    return this.state.canActivate ? (
+    return (
       <this.props.route.component
         {...this.props}
         data={this.props.route.data}
         routeConfig={this.props.route.routeConfig}
       />
-    ) : (
-      <div></div>
     );
+    
   }
 }
 
