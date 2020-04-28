@@ -1,43 +1,35 @@
 import React, { Suspense, lazy } from "react";
-// function RouterComponet() {
-//   return (
-//     <Switch>
-//       <Route exact path="/" component={Source} />
-//       <Route exact path="/Component/Target" component={Target} />
-//       <Route path="/component/HistoricalSimilarities" component={HistoricalSimilarities} />
-//       <Route exact path="/Component/ConfigureStage" component={ConfigureStage} />
-//       <Route path="/component/ValidateAndProcess" component={ValidateAndProcess} />
-//     </Switch>
-//   );
-// }
-// export default RouterComponet;
+import { Route, Switch } from "react-router";
 
+const Source = lazy(() => import("./component/Source"));
+const Target = lazy(() => import("./component/Target"));
+const HistoricalSimilarities = lazy(() =>
+  import("./component/HistoricalSimilarities")
+);
+const ConfigureStage = lazy(() => import("./component/ConfigureStage"));
+const ValidateAndProcess = lazy(() => import("./component/ValidateAndProcess"));
 
-const routeConfig = {
-  fallback: <div>Loading...</div>,
-  routes: [
-    {
-      path: "/",
-      exact: true,
-      component: lazy(() => import("./component/Source"))
-    },
-    {
-      path: "/target",
-      component: lazy(() => import("./component/Target"))
-    },
-    {
-      path: "/historicalSimilarities",
-      component: lazy(() => import("./component/HistoricalSimilarities"))
-    },
-    {
-      path: "/configureStage",
-      component: lazy(() => import("./component/ConfigureStage"))
-    },
-    {
-      path: "/validateAndProcess",
-      component: lazy(() => import("./component/ValidateAndProcess"))
-    }
-  ]
-};
-
-export default routeConfig;
+function RouterComponet() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <Switch>
+        <Route exact path="/" component={Source} />
+        <Route exact path="/target" component={Target} />
+        <Route
+          path="/HistoricalSimilarities"
+          component={HistoricalSimilarities}
+        />
+        <Route
+          exact
+          path="/ConfigureStage"
+          component={ConfigureStage}
+        />
+        <Route
+          path="/ValidateAndProcess"
+          component={ValidateAndProcess}
+        />
+      </Switch>
+    </Suspense>
+  );
+}
+export default RouterComponet;

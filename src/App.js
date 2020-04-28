@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
-import { Link } from "react-router-dom";
-import routeConfig from "./Routing";
-import RouterOutlet from "./RouterOutlet";
+import { Link,NavLink } from "react-router-dom";
+
+import RouterComponet from "./Routing";
 function App() {
   return (
     <div className="custom-section">
@@ -17,9 +17,9 @@ function App() {
           >
             <ul className="nav nav-tabs ">
               <li className="col-sm-2 textSize">
-                <Link to={`/`}>
+                <NavLink to={`/`}>
                   <strong> 1.Source</strong>
-                </Link>
+                </NavLink>
               </li>
               <li className="col-sm-2 textSize">
                 <Link to={`/target`}>
@@ -49,7 +49,7 @@ function App() {
           <br></br>
           <div className="col-sm-12">
             <div className=" view-port-height">
-              <RouterOutlet routeConfig={routeConfig}></RouterOutlet>
+              <RouterComponet></RouterComponet>
             </div>
           </div>
         </div>
